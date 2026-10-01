@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Сохранёнки",
+  "version": "1.0.0",
+  "description": "Сохраняйте тексты и вставляйте их в поля через контекстное меню.",
+  "permissions": ["storage", "menus", "activeTab", "notifications"],
+  "background": {"scripts": ["background.js"]},
+  "browser_action": {"default_title": "Сохранёнки", "default_popup": "popup.html", "default_icon": "icon.svg"},
+  "icons": {"48": "icon.svg", "96": "icon.svg"},
+  "browser_specific_settings": {"gecko": {"id": "saved-text@local.extension", "strict_min_version": "115.0", "data_collection_permissions": {"required": ["none"]}}}
+}

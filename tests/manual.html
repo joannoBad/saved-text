@@ -1,0 +1,12 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Проверка сохранёнок</title>
+<style>body{max-width:750px;margin:40px auto;font:18px system-ui}input,textarea,[contenteditable],iframe{display:block;box-sizing:border-box;width:100%;padding:12px;margin:12px 0;border:1px solid #777}label{display:block;margin-top:20px}</style>
+<h1>Проверка сохранёнок</h1><p>Выделите этот текст и сохраните его через правую кнопку мыши.</p>
+<label>Обычное поле<input value="Начало — выделите эту часть — конец"></label>
+<label>Многострочный текст<textarea rows="4">Первая строка
+Вторая строка</textarea></label>
+<label>Редактор с форматированием</label><div contenteditable="true">Текст с <strong>жирным фрагментом</strong> и продолжением.</div>
+<label>Поле во фрейме</label><iframe srcdoc="<!doctype html><html lang='ru'><label>Текст во фрейме <input value='Текст внутри фрейма'></label></html>" title="Проверка фрейма"></iframe>
+<label>Только чтение<input readonly value="Этот текст нельзя менять"></label>
+<label>Отключённое поле<input disabled value="Этот текст нельзя менять"></label>
+<p id="events">События input: 0</p><script>let count=0;document.addEventListener('input',()=>document.getElementById('events').textContent=`События input: ${++count}`);</script>
+</html>

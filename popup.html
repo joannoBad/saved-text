@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Сохранёнки</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><img src="icon.svg" width="32" height="32" alt=""><div><h1>Сохранёнки</h1><p>Ваши тексты всегда под рукой</p></div></header>
+  <form id="editor">
+    <h2 id="heading">Новая сохранёнка</h2>
+    <label>Название <span>необязательно</span><input id="title" maxlength="200" placeholder="Например, благодарность"></label>
+    <label>Группа <span>необязательно</span><input id="group" maxlength="100" list="groups" placeholder="Например, ответы"><datalist id="groups"></datalist></label>
+    <label>Текст<textarea id="text" rows="5" required placeholder="Что будем вставлять?"></textarea></label>
+    <div class="actions"><button type="submit" id="save">Сохранить</button><button type="button" id="cancel" class="secondary" hidden>Отмена</button></div>
+  </form>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section><h2>Сохранённые тексты <span id="count"></span></h2><input id="search" type="search" aria-label="Поиск сохранёнок" placeholder="Найти текст…"><div id="items"></div></section>
+  <footer>Правой кнопкой по полю → «Вставить сохранёнку». Чтобы добавить текст со страницы, выделите его и выберите «Сохранить выделенное в сохранёнки».</footer>
+  <script src="popup.js"></script>
+</body></html>
